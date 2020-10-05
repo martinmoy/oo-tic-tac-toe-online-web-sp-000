@@ -118,7 +118,6 @@ def play
         won?
         winner == "X" || winner == "O"
         puts "Congratulations #{winner}!"
-
      end
   end
 
