@@ -84,7 +84,7 @@ def draw?
 end
 
 def over?
-  won? || draw? 
+  won? || draw?
 end
 
 def winner
@@ -102,6 +102,7 @@ def turn
   if valid_move?(index)
     move(index, current_player)
   else
+    puts "Please enter another number:"
     return turn
   end
   display_board
@@ -117,7 +118,6 @@ def play
         won?
         winner == "X" || winner == "O"
         puts "Congratulations #{winner}!"
-
      end
   end
 
