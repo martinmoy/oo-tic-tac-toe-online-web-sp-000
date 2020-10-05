@@ -33,7 +33,7 @@ end
 
 
 def position_taken?(index)
-  !(@board[index].nil? || @board[index] == " " || @board[index] == "")
+  (@board[index] == "X" || @board[index] == "O")
 end
 
 def valid_move?(index)
@@ -80,11 +80,11 @@ def full?
 end
 
 def draw?
- !won? && full? ? true:false
+ !won? && full?
 end
 
 def over?
-  won? || draw? ? true:false
+  won? || draw? 
 end
 
 def winner
